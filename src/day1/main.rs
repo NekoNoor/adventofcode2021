@@ -10,10 +10,7 @@ fn main() {
     let reader = BufReader::new(file.unwrap());
 
     let vector: Vec<i32> = reader.lines().map(|x| x.unwrap().parse().unwrap()).collect();
-
-    println!("part1: {}", count_increment(&vector));
-
     let sum_vector: Vec<i32> = vector.windows(3).map(|x| x.iter().sum::<i32>()).collect();
 
-    println!("part2: {}", count_increment(&sum_vector));
+    println!("part1: {}\npart2: {}", count_increment(&vector), count_increment(&sum_vector));
 }
