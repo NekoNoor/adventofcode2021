@@ -1,14 +1,12 @@
-use std::fs::File;
-use std::io::*;
+use aoc::*;
 
 fn main() {
-    let file = File::open("./input/day3");
-    let reader = BufReader::new(file.unwrap());
+    let lines = read_input("input/day3");
 
     let mut chars: Vec<Vec<char>> = vec![Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new()];
 
-    for line in reader.lines() {
-        let linechars: Vec<char> = line.unwrap().chars().collect();
+    for line in lines {
+        let linechars: Vec<char> = line.chars().collect();
         for i in 0..12 {
             chars[i].push(linechars[i]);
         }

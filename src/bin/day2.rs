@@ -1,10 +1,7 @@
-use std::io::*;
-use std::fs::File;
+use aoc::*;
 
 fn main() {
-    let file = File::open("./input/day2");
-    let reader = BufReader::new(file.unwrap());
-
+    let lines = read_input("input/day2");
     //let lines: Vec<Vec<_>> = reader.lines().map(|x| x.unwrap().split(' ').collect::<Vec<_>>()).collect();
     
     let mut pos = 0;
@@ -12,9 +9,8 @@ fn main() {
     let mut depth2 = 0;
     let mut aim = 0;
 
-    for line in reader.lines() {
-        let current = line.unwrap();
-        let instruction = current.split(' ').collect::<Vec<_>>();
+    for line in lines {
+        let instruction = line.split(' ').collect::<Vec<_>>();
         let argument = instruction[1].parse::<i32>().unwrap();
         match instruction[0] {
             "forward" => {
