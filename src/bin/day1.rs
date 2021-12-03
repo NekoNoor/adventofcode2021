@@ -9,5 +9,9 @@ fn main() {
     let vector: Vec<i32> = lines.iter().map(|x| x.parse().unwrap()).collect();
     let sum_vector: Vec<i32> = vector.windows(3).map(|x| x.iter().sum::<i32>()).collect();
 
-    println!("part1: {}\npart2: {}", count_increment(&vector), count_increment(&sum_vector));
+    println!(
+        "part1: {}\npart2: {}",
+        count_increment(&vector),
+        count_increment(&sum_vector)
+    );
 }

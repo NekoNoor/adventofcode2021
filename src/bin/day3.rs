@@ -3,7 +3,20 @@ use aoc::*;
 fn main() {
     let lines = read_input("input/day3");
 
-    let mut chars: Vec<Vec<char>> = vec![Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new()];
+    let mut chars: Vec<Vec<char>> = vec![
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+        Vec::new(),
+    ];
 
     for line in lines {
         let linechars: Vec<char> = line.chars().collect();
@@ -18,7 +31,7 @@ fn main() {
         let count0 = chars[i].iter().filter(|&&x| x == '0').count();
         let count1 = chars[i].iter().filter(|&&x| x == '1').count();
         println!("chars[{}], count0: {}, count1: {}", i, count0, count1);
-        if count0 > count1 {    
+        if count0 > count1 {
             gamma_str.push('0');
             epsilon_str.push('1');
         } else {
