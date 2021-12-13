@@ -1,7 +1,7 @@
 use aoc::*;
 
 fn main() {
-    let lines = read_input("input/day3");
+    let lines = read_input("input/day03");
 
     let mut chars: Vec<Vec<char>> = vec![
         Vec::new(),

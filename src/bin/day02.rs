@@ -1,7 +1,7 @@
 use aoc::*;
 
 fn main() {
-    let lines = read_input("input/day2");
+    let lines = read_input("input/day02");
     //let lines: Vec<Vec<_>> = reader.lines().map(|x| x.unwrap().split(' ').collect::<Vec<_>>()).collect();
 
     let mut pos = 0;
